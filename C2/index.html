@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C1</title>
+    <style>
+        .slider {
+            position: absolute;
+            -webkit-appearance: none;
+            background: none;
+            width: 620px;
+            height: 400px;
+            z-index: 100;
+            margin-left: -10px;
+        }
+
+        .slider::-webkit-slider-thumb {
+            width: 20px;
+            -webkit-appearance: none;
+            height: 20px;
+            cursor: ew-resize;
+            background-color: white;
+            border-radius: 100%;
+        }
+        #grayscale {
+            position: absolute;
+            width: 300px;
+            overflow: hidden;
+            border-right: 2px solid #fff;
+        }
+        #grayscale img {
+            filter: grayscale();
+        }
+    </style>
+</head>
+<body>
+    <input type="range" class="slider" oninput="checkGray(this);">
+    <div id="grayscale">
+        <img src="images.jpg" alt="images" width="600px">
+    </div>
+    <img src="images.jpg" alt="images" width="600px">
+    <script type="text/javascript">
+        function checkGray(el) {
+            document.getElementById('grayscale').style.width = (el.value/100 * 600) + 'px'; 
+        }
+
+    </script>
+</body>
+</html>

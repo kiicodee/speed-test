@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mansory layout</title>
+    <style>
+
+        * {
+            margin: 0px;
+            padding: 0px;
+
+        }
+        body {
+            position: relative;
+            background-color: white;
+        }
+
+        .wrapper  {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 1rem;
+        }
+        .container {
+            width: 960px;
+            height: 500px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+        }
+        .item {
+            display: grid;
+            gap: 1rem;
+        }
+        .kotak {
+            background-color: gray;
+        }
+
+        .item:nth-child(1) {
+            grid-template-rows: 5fr 3fr 3fr;
+        }
+        .item:nth-child(2) {
+            grid-template-rows: 2fr 6fr 3fr;
+        }
+        .item:nth-child(3) {
+            grid-template-rows: 10fr 8fr 15fr;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+    <div class="container">
+        <div class="item">
+            <div class="kotak"></div>
+            <div class="kotak"></div>
+            <div class="kotak"></div>
+        </div>
+        <div class="item">
+            <div class="kotak"></div>
+            <div class="kotak"></div>
+            <div class="kotak"></div>
+        </div>
+        <div class="item">
+            <div class="kotak"></div>
+            <div class="kotak"></div>
+            <div class="kotak"></div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
